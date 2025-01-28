@@ -1,0 +1,187 @@
+/********************************** MENU******************************/
+/*fonts*/
+@font-face {
+    font-family: "Titre";
+    src: url('./font/ethnocentric/Ethnocentric\ Rg.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+/*** Nav Bar ******/
+/*fixed position*/
+.headermenu {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    left: 0;
+}
+.navlist {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}   
+li {
+    float: left;
+} 
+.link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Titre";
+}
+.link2 {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Titre";
+    padding: 14px 16px;
+} 
+li a:hover {
+    color: #166fd4;
+}
+.searchbar {
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Titre";
+    border-style: none;
+    margin-left: 25px;
+}
+/* bottom link menu */
+.navlist2 {
+    margin: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    }
+/*Hamburger menu*/
+.menu {
+    display: none;
+  }
+#hamburgermenu {
+    display: none;
+}
+/* MainPage */
+* {
+    margin: 0;
+}
+.bloc{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    z-index: -100;
+}
+.bloc img{
+    position: absolute;
+    min-width: 50%;
+    min-height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -100;
+}
+.bloc::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+}
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family:"Titre";
+    text-shadow: 0 0 10px #166fd4, 0 0 20px #166fd4, 0 0 30px #166fd4, 0 0 40px #166fd4;
+}
+/*Media Querries hamburger menu*/
+@media only screen and (max-width: 1065px){
+    .navbar {
+        position: relative;
+        display: inline-block;
+    }
+    .hamburgermenu {
+        display: none; 
+    }
+    .menu {
+        cursor: pointer;
+        padding: 10px;
+        display: block;
+        color: white;
+        font-family: "Titre";
+        margin-left: 15px;
+    }
+    .menu:hover{
+        color: #166fd4;
+    }
+    .navlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none; 
+        position: absolute;
+        top: 40px; 
+        left: 0;
+        z-index: 1;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .navlist2 {    
+        margin: 0;  
+        padding: 0; 
+        width: 100%;  
+        list-style-type: none;    
+        background-color: black; 
+        border-top-left-radius: 5px;    
+        border-top-right-radius: 5px;    
+        bottom: 0;    
+    }
+    .hamburgermenu:checked + .menu + .navlist {
+        display: flex;
+        flex-direction: column;
+    }
+    .navlist li {
+        text-align: left; 
+    }
+    .navlist li a {
+        text-decoration: none;
+        padding: 10px;
+        display: block;   
+    }
+    .searchbar {
+    margin-bottom: 25px;
+    }
+    .hamburgermenu2:checked + .menu2 + .navlist2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .link2{
+    padding-top: 14px;
+      padding-right: 16px;
+      padding-bottom: 14px;
+      padding-left: 25px;
+    }
+    .headermenu {
+        padding-bottom: 6px;
+    }
+}
+
